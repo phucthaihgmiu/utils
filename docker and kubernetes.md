@@ -128,7 +128,27 @@ $ kubectl get svc
 
 ## Monitor logs of a pod
 ```
-kubectl logs authentication-service-6b6dcdf5fd-8ldcf -f
+$ kubectl logs authentication-service-6b6dcdf5fd-8ldcf -f
 ```
 
+## Login to Cassandra Pod
+```
+$ kubectl exec -it pod/cassandra-1-cassandra-0 bash
+$ cqlsh
+```
+# C - Cassandra
 
+## Create a Keyspaces
+```
+$ CREATE KEYSPACE IF NOT EXISTS authentication WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : '1' };
+```
+
+## Describe all Keyspaces
+```
+$ DESC keyspaces;
+```
+
+## Query in a table
+```
+$ SELECT * FROM authentication.user;
+```
