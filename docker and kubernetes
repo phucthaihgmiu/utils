@@ -3,6 +3,7 @@ docker rmi authentication:latest -f
 
 # Build image
 docker build -t authentication:latest .
+docker build --platform=linux/amd64 -t authentication:latest .  //for Mac M1/M2
 
 # Get image
 docker images | grep order
