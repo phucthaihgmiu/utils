@@ -131,11 +131,21 @@ $ kubectl get svc
 $ kubectl logs authentication-service-6b6dcdf5fd-8ldcf -f
 ```
 
-## Login to Cassandra Pod
+## Login to a Pod (Cassandra/ MySQL/ Services) 
 ```
 $ kubectl exec -it pod/cassandra-1-cassandra-0 bash
+```
+
+## Start Cassandra inside Pod
+```
 $ cqlsh
 ```
+
+## Start MySQL inside Pod
+```
+$ mysqlsh
+```
+
 # C - Cassandra
 
 ## Create a Keyspaces
@@ -152,3 +162,7 @@ $ DESC keyspaces;
 ```
 $ SELECT * FROM authentication.user;
 ```
+
+# D - MySQL
+
+## Connect to MySQL
