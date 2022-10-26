@@ -1,0 +1,1 @@
+docker rmi authentication:latest -f && docker build -t authentication:latest . && dk images
