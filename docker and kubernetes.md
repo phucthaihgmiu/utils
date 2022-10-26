@@ -1,16 +1,16 @@
-### A - Docker Images:
+# A - Docker Images:
 
-# Delete image 
+## Delete image 
 ```
 $ docker rmi authentication:latest -f
 ```
 
-# Build image
+## Build image
 ```
 $ docker build -t authentication:latest .
 $ docker build --platform=linux/amd64 -t authentication:latest .  //for Mac M1/M2
 ```
-Sample docker build file
+### Sample docker build file
 ```
 FROM eclipse-temurin:17-alpine as builder
 WORKDIR extracted
@@ -30,40 +30,40 @@ ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
 ```
 
 
-# Get image
+## Get image
 ```
 $ docker images | grep order
 ```
 
-# Tag image
+## Tag image
 ```
 $ docker tag authentication:latest phucthaihg/authentication:1.0.1
 ```
 
-# Push image to Docker Hub
+## Push image to Docker Hub
 ```
 $ docker push phucthaihg/authentication:1.0.1
 ```
 
 
-### B - Kubernetes
+# B - Kubernetes
 
-# Show clusters (contexts) :
+## Show clusters (contexts) :
 ```
 $ kubectl config get-contexts
 ```
 
-# Switch to wanted context
+## Switch to wanted context
 ```
 $ kubectl config use-context gke_bubbly-enigma-366417_us-central1-c_sa-final-project-cluster
 ```
 
-# Deploy
+## Deploy
 ```
 kubectl apply -f authentication-service.yml
 ```
 
-Sample deployment file (service & deployment)
+### Sample deployment file (service & deployment)
 ```
 apiVersion: v1
 kind: Service
@@ -116,17 +116,17 @@ spec:
               port: 8080
 ```
 
-# Show all info (pods, services ...)
+## Show all info (pods, services ...)
 ```
 $ kubectl get all
 ```
 
-# Show only services
+## Show only services
 ```
 $ kubectl get svc
 ```
 
-# Monitor logs of a pod
+## Monitor logs of a pod
 ```
 kubectl logs authentication-service-6b6dcdf5fd-8ldcf -f
 ```
