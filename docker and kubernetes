@@ -1,8 +1,17 @@
-docker rmi authentication:latest -f && docker build -t authentication:latest . && dk images
+# Delete image 
+docker rmi authentication:latest -f
 
-docker tag authentication:latest  phucthaihg/authentication:1.0
+# Build image
+docker build -t authentication:latest .
 
-docker image push phucthaihg/authentication:1.0
+# Get image
+docker images | grep order
+
+# Tag image
+docker tag authentication:latest phucthaihg/authentication:1.0.1
+
+# Push image
+docker push phucthaihg/authentication:1.0.1
 
 
 minikube start
