@@ -163,6 +163,9 @@ $ DESC keyspaces;
 $ SELECT * FROM authentication.user;
 ```
 
-# D - MySQL
+# Ect.
 
-## Connect to MySQL
+## Mount to minikube
+```
+$ minikube start --mount-string="kc_data:/opt/keycloak/data/import" --mount
+```
