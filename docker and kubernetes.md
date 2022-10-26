@@ -1,4 +1,4 @@
-A - Docker Images:
+### A - Docker Images:
 
 # Delete image 
 ```
@@ -40,13 +40,13 @@ $ docker images | grep order
 $ docker tag authentication:latest phucthaihg/authentication:1.0.1
 ```
 
-# Push image
+# Push image to Docker Hub
 ```
 $ docker push phucthaihg/authentication:1.0.1
 ```
 
 
-B - Kubernetes
+### B - Kubernetes
 
 # Show clusters (contexts) :
 ```
@@ -130,7 +130,5 @@ $ kubectl get svc
 ```
 kubectl logs authentication-service-6b6dcdf5fd-8ldcf -f
 ```
-
-minikube start
 
 
