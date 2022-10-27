@@ -163,6 +163,24 @@ $ DESC keyspaces;
 $ SELECT * FROM authentication.user;
 ```
 
+# MySQL
+
+## login with root
+```
+$ mysql -u root -p
+```
+
+## show databases
+```
+$ SHOW DATABASES;
+```
+
+## use databases
+```
+$ USE authenticationdb;
+```
+
+
 # Ect.
 
 ## Mount to minikube
